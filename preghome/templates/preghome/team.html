@@ -1,0 +1,90 @@
+{% extends "preghome/base.html" %}
+{% load static %}
+{% block content %}
+	<div style="background-color: #197476;height: 60%;">
+		<section>
+			<div class="row">
+				{% include "preghome/snippets/sidebar.html" %}
+				<div class="col-lg-9 col-md-9 col-sm-9" style="padding-top: 20px;background-color:  #f9f7f6;">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-sm-3">
+								<hr  />
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6">
+								<h1 style="text-align: center;font-weight: bold;">OUR TEAM</h1>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3">
+								<hr />
+							</div>	
+						</div>
+						<div class="row" style="margin-top: 30;margin-bottom: 20">
+							<div class="col-lg-4 col-md-4 col-sm-4">
+								<img src="{% static "preghome/images/jose.jpg" %}" 
+									style="height: 230px;width: 270px;border-radius: 90px;" alt="photo"
+								>
+								<h4 style="margin-top: 10px;font-weight: bolder;color: #23396b;text-align: center;">
+									Lutalo Joseph Bbosa</h4>
+								<h5 style="margin-top: 10px;text-align: center;">
+									Founder & CEO
+								</h5>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4">
+								<img src="{% static "preghome/images/DOLLAR-FINAL.png" %}" 
+									style="height: 230px;width: 250px;" alt="photo"
+								>
+								<h4 style="margin-top: 10px;font-weight: bolder;color: #23396b;text-align: center;">
+									Micheal Kanaabi</h4>
+								<h5 style="margin-top: 10px;text-align: center;">
+									Co-Founder & Head Marketing
+								</h5>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4">
+								<img src="{% static "preghome/images/bob_cover.jpeg" %}" 
+									style="height: 230px;width: 250px;border-radius: 70px;" alt="photo"
+								>
+								<h4 style="margin-top: 10px;font-weight: bolder;color: #23396b;text-align: center;">Robert Bob Okello</h4>
+								<h5 style="margin-top: 10px;text-align: center;">
+									Business Lead
+								</h5>
+							</div>
+						</div>
+						<div class="row" style="margin-top: 60px;">
+							<div class="col-lg-4 col-md-4 col-sm-4">
+								<img src="{% static "preghome/images/KINGSHIP.png" %}" 
+									style="height: 230px;width: 250px;" alt="photo"
+								>
+								<h4 style="margin-top: 10px;font-weight: bolder;color: #23396b;text-align: center;">
+									Natukwasa Lindone</h4>
+								<h5 style="margin-top: 10px;text-align: center;">
+									Public Relations
+								</h5>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4">
+								<img src="{% static "preghome/images/nicholas.jpg" %}" 
+									style="height: 230px;width: 250px;border-radius: 70px;" alt="photo"
+								>
+								<h4 style="margin-top: 10px;font-weight: bolder;color: #23396b;text-align: center;">	Dr. Nicholas Mpagi
+								</h4>
+								<h5 style="margin-top: 10px;text-align: center;">
+									Health strategist
+								</h5>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4">
+								<img src="{% static "preghome/images/vibem.jpg" %}" 
+									style="height: 230px;width: 250px;border-radius: 70px;" alt="photo"
+								>
+								<h4 style="margin-top: 10px;font-weight: bolder;color: #23396b;text-align: center;">	
+									Benjamin Mayanja
+								</h4>
+								<h5 style="margin-top: 10px;text-align: center;">
+									Lead Developer
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+{% endblock %}

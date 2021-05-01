@@ -1,0 +1,11 @@
+
+<div class="card" style="border: none;height: 60px;">
+    {% if instance.img %}
+      <a href="{{ instance.get_absolute_url }}">
+        <img src="{{ instance.img.url }}" alt="{{ instance.method_name }}" style="height: 200px;width: 300px;">
+      </a>
+    {% endif %}
+    <div class="card-body">
+      <h4><b>{{ instance.method_name|lower }}</b></h4>
+    </div>
+</div>

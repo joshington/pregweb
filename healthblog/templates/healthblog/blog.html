@@ -1,0 +1,48 @@
+{% extends "preghome/base.html" %}
+{% load static %}
+{% block content %}
+	<div style="background-color: #197476;height: 70%;">
+		<section>
+			<div class="row">
+				{% include "preghome/snippets/sidebar.html" %}
+				<div class="col-lg-9 col-md-9 col-sm-9" style="padding-top: 20px;background-color:  #f9f7f6;">
+					<div class="container">
+						<div class="row">
+							<h2 style="font-weight: bold;color: #23396b;">Health care tips from our blog</h2>
+						</div>
+						<div class="row mt-3">
+							{% for obj in qs %}
+								<div class="col-lg-4 col-md-4 col-sm-4">
+                                    {% include "healthblog/snippets/tipcard.html" with instance=obj %}
+                                </div>
+							{% endfor %}
+						</div>
+
+					</div>
+					<hr />
+					<section style="width: 100%;height: 40%;align-items: center;">
+						<div class="container">
+							<div class="row mt-2" style="align-items: center;">
+								<h3 style="text-align: center; margin-left: 250px;color: #000;font-weight: bold;">
+									Join Our Mailing List
+								</h3>
+								<h5 style="margin-left: 80px;margin-bottom: 25px;margin-top: 10px;">Be the first to get instant health advise, and amazing discounts on our platform</h5>
+							</div>
+							<div class="row mt-1" style="flex-direction: row; margin-left: 200px;margin-bottom: 50px;
+								margin-top: 25px;
+							">
+								<input style="width: 300px;"></input>
+								<button style="margin-left: 10px;border-radius: 10px;width: 120px;font-weight: bold;">
+									SignUp
+								</button>
+							</div>
+						</div>
+					</section>
+
+				</div>
+				
+			</div>
+		</section>
+
+	</div>
+{% endblock %}

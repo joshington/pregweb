@@ -1,0 +1,62 @@
+{% extends "preghome/base.html" %}
+{% load static %}
+{% block content %}
+	<div style="background-color: #197476;height: 60%;">
+		<section>
+			<div class="row">
+				{% include "preghome/snippets/sidebar.html" %}
+				<div class="col-lg-9 col-md-9 col-sm-9" style="padding-top: 20px;background-color:  #f9f7f6;">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 20px;">
+								<div>
+									<h3 style="font-weight: bold;">Book your Bedside Nurse with us</h3>
+									<img src="{% static "preghome/images/bedsideimage.png" %}" 
+										style="height: 300px;width: 400px;margin-top: 10px;margin-right: 10px;" alt="photo"
+									>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8" style="padding-top: 20px;margin-bottom: 30px;">
+								<h4 style="text-align: center;font-weight: bold;">NURSE PACKAGE</h4>
+								<form class="credit-card" style="width:360px; height: 360px; margin: 60px auto 0;
+									border: 1px solid #ddd;border-radius: 6px;background-color: #fff;
+    								box-shadow: 1px 2px 3px 0 rgba(0,0,0,.10);
+								"
+									role="form" action="{%  url "preghome:book_final" %}" method="post" enctype="multipart/form-data" 
+								>
+									<div class="form-header" style="height:40px;border-bottom:1px solid #e1e8ee;
+										align-items: center;
+									"
+									>
+									    <h4 class="title" style="font-size: 20px;margin:0;text-align: center;align-self: center;color: #197476;font-weight: bold;margin-top: 10px;">UGX 50,000/day</h4>
+									    
+									  </div>
+										<div style="margin-left: 15px;margin-top: 15px;text-align: center;">
+											{% csrf_token %}
+											{{ form.as_p }}
+										</div>
+									  
+									    	<button type="submit" class="proceed-btn"
+									    		style="cursor: pointer;font-size: 16px;width: 70%;
+    													border-color: transparent;border-radius: 6px;margin-top: 15;
+    													margin-bottom: 10px;background: #197476;height: 50px;
+    													margin-left: 55px;
+    												" 	
+									    	>
+									    		<a href="{% url "preghome:book_final" %}" style="color: #fff;">Request Nurse</a>
+									    	</button>
+									    </div>
+									 
+								
+									    <!-- Buttons -->
+									    
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+{% endblock %}

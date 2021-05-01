@@ -1,0 +1,11 @@
+<h3 style="color: white;">{{ product.name }}</h3>
+<h5>Category: <b style="color: white;">{{ product.category_name }}</b> Tags:</h5>
+<p>{{	product.description|linebreaks	}}</p>
+<p	class="price" style="color:purple;font-size:25px">UGX {{  product.price	}}</p>
+<form	action="{%	url	"cart:cart_add"	product.id	%}"	method="post">
+    {{	form_n	}}
+    {%	csrf_token	%}
+    <input	type="submit" value="Add to Cart" style="background-color: blue;color: whitesmoke;
+        border-radius: 5px;">
+</form>
+{# {{	product.description|linebreaks	}} #}

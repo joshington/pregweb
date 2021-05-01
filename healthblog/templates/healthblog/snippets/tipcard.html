@@ -1,0 +1,18 @@
+<div>
+	 {% if instance.image %}
+	      <a href="#">
+	        <img src="{{ instance.image.url }}" alt="{{ instance.name }}" style="height: 200px;width: 235px;">
+	      </a>
+	      <h4 style="color: #20B2AA;font-weight: bold;"><b>{{ instance.title|lower }}</b></h4>
+	      <h6 style="
+	      		overflow: hidden;
+	      		text-overflow: ellipsis;
+	      		display: -webkit-box;
+	      		line-height: 25px;
+	      		max-height: 100px;
+	      		-webkit-line-clamp:5;
+	      		-webkit-box-orient:vertical;
+	      	"
+	      >{{ instance.description }}</h6>
+    {% endif %}
+</div>

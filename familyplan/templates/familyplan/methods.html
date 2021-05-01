@@ -1,0 +1,53 @@
+{% extends "preghome/base.html" %}
+{% load static %}
+{% block content %}
+    <div style="background-color: #197476;height: 60%;">
+        <section>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3" style="margin-top: 0px;">
+                    <span style="margin-left: 10px;">
+                        <img src="{% static "preghome/images/preghealth.png" %}"  alt="logo">
+                    </span>
+                    <hr />
+                    <ul>
+                        <ol style="color: #fff">About Us</ol>
+                        <hr />
+                        <ol style="color: #fff">Maternal Shop</ol>
+                        <hr />
+                        <ol style="color: #fff">Our Team</ol>
+                        <hr />
+                        <ol style="color: #fff">Family Planning services</ol>
+                        <hr />
+                        <ol style="color: #fff">Our Partners</ol>
+                        <hr />
+                        <ol style="color: #fff">Our Clients</ol>
+                        <hr />
+                        <ol style="color: #fff">Funding & Support</ol>
+                        <hr />
+                    </ul>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9" style="padding-top: 20px;background-color: #fff;border-radius: 5px;border-color: #000;">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <div class="row">
+                                    <h4 style="text-align: center;color: #000;">Family Planning services</h4>
+                                    <div class="container" style="height: 350px;">
+                                        <div class="row">
+                                            {% for obj in qs %}
+                                                {% if forloop.counter|divisibleby:3 %}
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 text-dark">
+                                                        {% include "familyplan/snippets/method_card.html" with instance=obj %}
+                                                    </div>
+                                                {% endif%}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+0704972448

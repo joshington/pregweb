@@ -1,0 +1,14 @@
+
+<div class="card" style="border: none;height: 60px;">
+    {% if instance.image %}
+      <a href="{{ instance.get_absolute_url }}">
+        <img src="{{ instance.image.url }}" alt="{{ instance.name }}" style="height: 300px;width: 300px;">
+      </a>
+    {% endif %}
+    <div class="card-body">
+      <h4><b>{{ instance.name|lower }}</b></h4>
+      <!-- <h5 style="text-align: start;margin-left: 35px;">{{ instance.category_product }}</h5> -->
+      <h4 style="color:purple;font-size: 20px;font-weight: bold;">UGX {{ instance.price }}</h4>
+      <button>Add To Cart</button>
+    </div>
+</div>

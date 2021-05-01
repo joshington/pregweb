@@ -1,0 +1,101 @@
+{%	load static	%}
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        {% block title %}
+            PregHealth
+        {% endblock %}
+    </title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--font awesome css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{% static " healthblog/css/style.css " %}">
+    <!-- Optional JavaScript -->
+
+    <!--Adding animations into html-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+	<section style="background-color: #20B2AA;height: 80%;">
+        <div class="container col-lg-3" style="padding-left: 1rem; color: #fff;">
+            <nav class="navbar navbar-expand-lg">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav justify-content-between w-100" style="color:black;">
+                        <li class="nav-item text-dark " style="color: black;">
+                            <a class="nav-link" href="#" style="color: black;font-weight: bold;" >+256773943826<span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"style="color: black;" >
+                            <a class="nav-link" href="#" style="color: black;font-weight: bold;" >inquiry@preghealth.com</a>
+                        </li>
+                        <li class="nav-item" style="color: black;">
+                            <a class="nav-link" href="#" style="color: black;font-weight: bold;">
+                            Alldays(24/7)
+                            </a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 100px;color: black">
+                            <a class="nav-link new_cart" href="#">
+                                <span class="navbar-cart-count">{{ request.session.cart_items }}</span>
+                                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    {% block content %}
+    {% endblock %}
+    <section style="background-color: #20B2AA; height: 320px;">
+        <div class="container-fluid now_end">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-7 mt-4">
+                    <h3 style="font-weight: bold;">Available on PlayStore and coming soon AppleStore.</h3>
+                    <div style="flex-direction: row;margin-top: 20px;">
+                        <img src="{% static "preghome/images/playstore.png" %}" 
+                            style="height: 80px;width: 140px;margin-left: 150px;" alt="photo"
+                        >
+                        <img src="{% static "preghome/images/coming_apple.jpeg" %}" 
+                            style="height: 50px;width: 140px;" alt="photo"
+                        >
+                    </div>
+                    <div style="flex-direction: row;justify-content: space-between;margin-left: 130px;margin-top: 20px;">
+                        <i class="fa fa-twitter fa-3x" style="margin-right: 25px;color: white;"></i>
+                        <i class="fa fa-facebook-square fa-3x" aria-hidden="true" style="margin-right: 25px;
+                            color: white;"></i>
+                        <i class="fa fa-instagram fa-3x" aria-hidden="true" style="margin-right: 25px;color: white;">
+                            
+                        </i>
+                        <i class="fa fa-envelope fa-3x" aria-hidden="true" style="margin-right: 25px;color: white;"></i>
+                        <i class="fa fa-phone  fa-3x" aria-hidden="true" style="margin-right: 25px;color: white;">
+                            
+                        </i>
+
+                    </div>
+                     <h6 style="font-weight: bold;margin-left: 30px;margin-top: 20px;">© 2021 PregHealth is a product of Matrix Solutions Ltd.</h6>
+                    <div style="flex-direction: row;justify-content: space-between;margin-left: 130px;margin-top: 20px;">
+                        <h6 style="margin-left: 30px;margin-top: 20px;">Terms & Conditions Apply</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    
+                </div>
+            </div>
+    </section>
+</body>

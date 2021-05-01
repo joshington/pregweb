@@ -1,0 +1,76 @@
+{% extends "preghome/base.html" %}
+{% load static %}
+{% block content %}
+	<div style="background-color: #197476;height: 60%;">
+		<section>
+			<div class="row">
+				{% include "preghome/snippets/sidebar.html" %}
+				<div class="col-lg-9 col-md-9 col-sm-9" style="padding-top: 20px;">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7 col-md-7 col-sm-7" style="background-color: white">
+								<img src="{% static "preghome/images/about_image.png" %}" 
+									style="height: 300px;width: 550px;margin-top: 10px;margin-right: 10px;" alt="photo"
+								>
+								<span style="margin-left: 25px;">
+	    							<img src="{% static "preghome/images/preghealth.png" %}" style="width: 100px;height: 46px;margin-top: 15px;" alt="logo">
+								</span>
+								<h4 style="font-size:40px;margin-top: 15px;color: #000;font-weight: bolder;">WHO WE ARE</h4>
+								<hr />
+								<div>
+									<h5 style="font-size: 17px;line-height: 30px;">
+										We are a  health-tech company geared towards curbing  the high motality rates in Uganda, we as preghealth believe that emphasizing micro-savings in our communities is the perfect
+										solution to cater for the essential health care needs, hence through our maternal wallet
+										pregnant women can save for their maternal period from as low as $0.3
+									</h5>
+								</div>
+								<hr />
+								<h4 style="font-weight: bold;">THE PROBLEM</h4>
+								<div>
+									<h5 style="font-size: 17px;line-height: 30px;">
+										Healthcare is the most important industry in the world and even more so in Africa with an estimated 1.2 billion people. Each year at least 1.16 million newborns die in sub-Saharan Africa within the first 28 days of life yet more than two thirds of these infants could be saved with low cost, low tech action. Through our findings from mothers in Uganda, there is;
+
+									</h5>
+									<hr style="margin-bottom: 40px;" />
+								</div>
+							</div>
+							<div class="col-lg-5 col-md-5 col-sm-5" style="background-color: #d9f3f1;font-weight: bold;">
+								<div style="margin-top: 15px;">
+									<h4 style="color: blue;font-weight: bold;">OUR INNOVATION</h4>
+									<h5 style="font-size: 17px;line-height: 30px;">
+										A micro-savings platform leveraging the mobile money infrastructure
+
+									</h5>
+									<hr style="margin-bottom: 40px;" />
+								</div>
+								<div style="margin-top: 15px;">
+									<h4 style="color: blue;font-weight: bold;">OUR MISSION</h4>
+									<h5 style="font-size: 17px;line-height: 30px;">
+										A micro-savings platform leveraging the mobile money infrastructure
+									</h5>
+									<hr style="margin-bottom: 40px;" />
+								</div>
+								<div style="margin-top: 15px;">
+									<h4 style="color: blue;font-weight: bold;">OUR PURPOSE:</h4>
+									<h5 style="font-size: 17px;line-height: 30px;">
+										A micro-savings platform leveraging the mobile money infrastructure
+									</h5>
+									<hr style="margin-bottom: 40px;" />
+								</div>
+								<div style="margin-top: 15px;">
+									<h4 style="color: blue;font-weight: bold;">OUR VISION:</h4>
+									<h5 style="font-size: 17px;line-height: 30px;">
+										A micro-savings platform leveraging the mobile money infrastructure
+										
+
+									</h5>
+									<hr style="margin-bottom: 40px;" />
+								</div>
+							</div>
+							
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+{% endblock %}

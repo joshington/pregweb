@@ -1,0 +1,72 @@
+{% extends "preghome/base.html" %}
+{% load static %}
+{%	block	title %}
+	{{ object.category_name }}
+{%	endblock  %}
+{% block content %}
+	<div style="background-color: #197476;height: 60%;">
+		<section>
+			<div class="row">
+				{% include "preghome/snippets/sidebar.html" %}
+				<div class="col-lg-9 col-md-9 col-sm-9" style="padding-top: 20px;">
+					<div class="container">
+						<div class="row" style="background-color:none;widows: 600px;height: 80px;text-align: center;">
+							<h2 style="color: whitesmoke;margin-left: 15px;font-size: 25px;padding-top: 20px;">
+								<a href="#" style="color: whitesmoke;">Home</a>
+							</h2>
+							<h3 style="margin-left: 15px;margin-top: 5px;color: whitesmoke;padding-top: 15px;">></h3>
+							<h2 style="font-size: 25px;margin-top: 8px;padding-top: 15px;margin-left: 8px;color: whitesmoke;">{{ object.category_name }}</h2>
+							<h3 style="margin-left: 15px;margin-top: 5px;padding-top: 15px;color: whitesmoke;">></h3>
+							<h2 style="font-size: 25px;margin-top: 8px;padding-top: 15px;margin-left: 8px;color: whitesmoke;">{{ object.name }}</h2>
+
+						</div>
+						<hr>
+						<div class="bordered">
+							<style type="text/css">
+								.bordered {
+									padding: 5px;
+									border: 1px solid black;
+									
+								}
+								.checked {
+									color: orange;
+								}
+								.button {
+									/*background-color: #d9320d;*/
+									background-color: white;
+									border: 1px;
+									color:  white;
+									padding:5px;
+									text-align: center;
+									text-decoration: none;
+									display: inline-block;
+								}
+								.button1 {border-radius: 20px;}
+							</style>
+							<div class="row ">
+								<div class="col-12 col-md-6 text-align-center ">
+									<!--{{ object.desription|linebreaks }} -->
+									{% if object.image %}
+										<img src="{{ object.image.url }}" class="img-fluid"/>
+									{% endif %}
+								</div>
+								<div class="col-12 col-md-6">
+									{% include "preghome/snippets/update-cart.html" with product=object  form_n=cart_product_form %}
+									<span style="justify-content: space-between;">
+										<i class="fa fa-whatsapp fa-3x" aria-hidden="true" style="margin-left: 1rem; color: green;"></i>&nbsp;<i class="fa fa-twitter-square fa-3x" aria-hidden="true" style="color: royalblue;"></i>&nbsp;<i class="fa fa-facebook-square fa-3x " style="margin-right: 7px;color: blue;"></i>&nbsp;<i class="fa fa-instagram  fa-3x " style="margin-right: 7px;color: purple;"></i>&nbsp;<i class="fa fa-pinterest fa-3x mx-0" style="color: red;"></i>&nbsp;
+									</span>	
+								</div>
+							</div>
+							<span>
+								<img src="{{ object.image.url }}" class="img-fluid" width="100" height="150" style="margin-top:15px"/>
+								<img src="{{ object.image.url }}" class="img-fluid" width="100" height="150" style="margin-top:15px"/>
+							</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+	</div>
+{% endblock %}

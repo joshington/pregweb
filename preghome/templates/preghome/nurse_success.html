@@ -1,0 +1,32 @@
+{% extends "preghome/base.html" %}
+{% load static %}
+{% block content %}
+	<div style="background-color: #197476;height: 60%;">
+		<section>
+			<div class="row">
+				{% include "preghome/snippets/sidebar.html" %}
+				<div class="col-lg-9 col-md-9 col-sm-9" style="padding-top: 20px;background-color:  #f9f7f6;">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 20px;">
+								<div>
+									<h3 style="font-weight: bold;">Book your Bedside Nurse with us</h3>
+									<img src="{% static "preghome/images/bedsideimage.png" %}" 
+										style="height: 300px;width: 400px;margin-top: 10px;margin-right: 10px;" alt="photo"
+									>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-4">
+								<div>
+									<h4>
+										Nurse Booked Successfully
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+{% endblock %}
